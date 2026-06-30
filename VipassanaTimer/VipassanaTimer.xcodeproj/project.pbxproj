@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		995A4E1BACBE4BDE882E0B68 /* VipassanaTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4338413C5F4EF1A48AE993 /* VipassanaTimerApp.swift */; };
+		8F9CA283A3C549999B763698 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CE2246711446DF8B22D46C /* ContentView.swift */; };
+		01FD21F339374E5297953066 /* MeditationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027071597A8C473CA56D806E /* MeditationSession.swift */; };
+		3D3B8D0B5D4E42DB820CEFB4 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F14F3F47D8E4184B9F12246 /* SessionStore.swift */; };
+		5B78705193424CB9B5D78E51 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE872910E14BDDAFA8A35B /* HealthKitManager.swift */; };
+		419391CB0CE94B4EB0520A8B /* BellPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34615449E4AD4EE582B8B702 /* BellPlayer.swift */; };
+		CE67E5A077C34DF5B8EA8F40 /* MeditationTimerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BAD41FC71B469D9EAB0000 /* MeditationTimerEngine.swift */; };
+		9B0AE5A863004E25A89986B0 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259D65E93D8547D4BD252902 /* TimerView.swift */; };
+		B2411EE202FA4DF9BDD064E2 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F8D4FB661243FDA93DCC66 /* CalendarView.swift */; };
+		8C2D0D860F734DF597F7B16E /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FC7A3A688D46DE9AD2B695 /* StreakView.swift */; };
+		3625AF0DEB694D42822361C7 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5669A6645544EC8368D530 /* HistoryView.swift */; };
+		048166893EDB451BBEE45ABB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B4FC26E9D4559B1A16D42 /* SettingsView.swift */; };
+		C7825182DEAD4A50912533C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCBCD7FD40684525B7BC0B8E /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CA4338413C5F4EF1A48AE993 /* VipassanaTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipassanaTimerApp.swift; sourceTree = "<group>"; };
+		E0CE2246711446DF8B22D46C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		027071597A8C473CA56D806E /* MeditationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSession.swift; sourceTree = "<group>"; };
+		2F14F3F47D8E4184B9F12246 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		54EE872910E14BDDAFA8A35B /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		34615449E4AD4EE582B8B702 /* BellPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellPlayer.swift; sourceTree = "<group>"; };
+		16BAD41FC71B469D9EAB0000 /* MeditationTimerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTimerEngine.swift; sourceTree = "<group>"; };
+		259D65E93D8547D4BD252902 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		87F8D4FB661243FDA93DCC66 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		93FC7A3A688D46DE9AD2B695 /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
+		1B5669A6645544EC8368D530 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		1B0B4FC26E9D4559B1A16D42 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DCBCD7FD40684525B7BC0B8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DB90195E5B8495998E2C2A4 /* VipassanaTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VipassanaTimer.entitlements; sourceTree = "<group>"; };
+		03B9CB0EAC5C4D0D8B784AF1 /* VipassanaTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VipassanaTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29657A99CD8D4E98A410A5DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+
+		5A380D2E56AB49AA84C842EC = {
+			isa = PBXGroup;
+			children = (
+				55EED61C52294323B00F901D /* VipassanaTimer */,
+				674B4E0315A14D398946ED22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		674B4E0315A14D398946ED22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03B9CB0EAC5C4D0D8B784AF1 /* VipassanaTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55EED61C52294323B00F901D /* VipassanaTimer */ = {
+			isa = PBXGroup;
+			children = (
+				CA4338413C5F4EF1A48AE993 /* VipassanaTimerApp.swift */,
+				E0CE2246711446DF8B22D46C /* ContentView.swift */,
+				027AB89EFD684C7B9979D98A /* Models */,
+				BA62F6241470497B9A204B71 /* Services */,
+				62B517A2323141F88A54CCA9 /* Views */,
+				DCBCD7FD40684525B7BC0B8E /* Assets.xcassets */,
+				1DB90195E5B8495998E2C2A4 /* VipassanaTimer.entitlements */,
+			);
+			path = VipassanaTimer;
+			sourceTree = "<group>";
+		};
+		027AB89EFD684C7B9979D98A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				027071597A8C473CA56D806E /* MeditationSession.swift */,
+				2F14F3F47D8E4184B9F12246 /* SessionStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA62F6241470497B9A204B71 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				54EE872910E14BDDAFA8A35B /* HealthKitManager.swift */,
+				34615449E4AD4EE582B8B702 /* BellPlayer.swift */,
+				16BAD41FC71B469D9EAB0000 /* MeditationTimerEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		62B517A2323141F88A54CCA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				259D65E93D8547D4BD252902 /* TimerView.swift */,
+				87F8D4FB661243FDA93DCC66 /* CalendarView.swift */,
+				93FC7A3A688D46DE9AD2B695 /* StreakView.swift */,
+				1B5669A6645544EC8368D530 /* HistoryView.swift */,
+				1B0B4FC26E9D4559B1A16D42 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93FDD3299DB74457ABD1D146 /* VipassanaTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB35539FA02142E4A50F0E59 /* Build configuration list for PBXNativeTarget "VipassanaTimer" */;
+			buildPhases = (
+				7D605EBD95F84ED9BDCBC1DF /* Sources */,
+				29657A99CD8D4E98A410A5DF /* Frameworks */,
+				4B95E35C127744A8AEB588A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VipassanaTimer;
+			productName = VipassanaTimer;
+			productReference = 03B9CB0EAC5C4D0D8B784AF1 /* VipassanaTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8CC84B221E74EFCB57A77E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					93FDD3299DB74457ABD1D146 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 5F021C2A1C534C4594351D17 /* Build configuration list for PBXProject "VipassanaTimer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A380D2E56AB49AA84C842EC;
+			productRefGroup = 674B4E0315A14D398946ED22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93FDD3299DB74457ABD1D146 /* VipassanaTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B95E35C127744A8AEB588A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7825182DEAD4A50912533C1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D605EBD95F84ED9BDCBC1DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				995A4E1BACBE4BDE882E0B68 /* VipassanaTimerApp.swift in Sources */,
+				8F9CA283A3C549999B763698 /* ContentView.swift in Sources */,
+				01FD21F339374E5297953066 /* MeditationSession.swift in Sources */,
+				3D3B8D0B5D4E42DB820CEFB4 /* SessionStore.swift in Sources */,
+				5B78705193424CB9B5D78E51 /* HealthKitManager.swift in Sources */,
+				419391CB0CE94B4EB0520A8B /* BellPlayer.swift in Sources */,
+				CE67E5A077C34DF5B8EA8F40 /* MeditationTimerEngine.swift in Sources */,
+				9B0AE5A863004E25A89986B0 /* TimerView.swift in Sources */,
+				B2411EE202FA4DF9BDD064E2 /* CalendarView.swift in Sources */,
+				8C2D0D860F734DF597F7B16E /* StreakView.swift in Sources */,
+				3625AF0DEB694D42822361C7 /* HistoryView.swift in Sources */,
+				048166893EDB451BBEE45ABB /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BBD25714FE15450B84D497C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+
+			};
+			name = Debug;
+		};
+		D75D4B28E53F4EB4A615D6DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+
+			};
+			name = Release;
+		};
+		C44AFB6BF9A74464A586C1C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VipassanaTimer/VipassanaTimer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vipassana Timer";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Vipassana Timer reads your Mindful Minutes to keep your Apple Health data in sync with your practice.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Vipassana Timer saves completed sessions to Apple Health as Mindful Minutes.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goranmicevski.VipassanaTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+
+			};
+			name = Debug;
+		};
+		190F063C5F0745FD837866F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VipassanaTimer/VipassanaTimer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vipassana Timer";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Vipassana Timer reads your Mindful Minutes to keep your Apple Health data in sync with your practice.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Vipassana Timer saves completed sessions to Apple Health as Mindful Minutes.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goranmicevski.VipassanaTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F021C2A1C534C4594351D17 /* Build configuration list for PBXProject "VipassanaTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBD25714FE15450B84D497C5 /* Debug */,
+				D75D4B28E53F4EB4A615D6DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB35539FA02142E4A50F0E59 /* Build configuration list for PBXNativeTarget "VipassanaTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C44AFB6BF9A74464A586C1C8 /* Debug */,
+				190F063C5F0745FD837866F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = C8CC84B221E74EFCB57A77E6 /* Project object */;
+}
