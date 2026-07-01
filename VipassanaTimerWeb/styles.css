@@ -1,0 +1,380 @@
+:root {
+  --accent: #5B7458;
+  --accent-soft: rgba(91, 116, 88, 0.16);
+  --bg: #F7F6F2;
+  --card-bg: #FFFFFF;
+  --text: #21261F;
+  --text-secondary: #6B6F68;
+  --danger: #C0432F;
+  --track: #E3E1D9;
+  font-size: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #8FB489;
+    --accent-soft: rgba(143, 180, 137, 0.2);
+    --bg: #14170F;
+    --card-bg: #1E221A;
+    --text: #EDEEE9;
+    --text-secondary: #A2A69B;
+    --track: #2A2E24;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding-bottom: calc(64px + env(safe-area-inset-bottom));
+}
+
+.app-header {
+  padding: env(safe-area-inset-top) 20px 12px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 12px 0 0;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 8px 20px 24px;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Segmented control */
+.segmented {
+  display: flex;
+  background: var(--track);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.segmented-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  border-radius: 9px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.segmented-btn.active {
+  background: var(--card-bg);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+/* Duration picker */
+.duration-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 24px;
+}
+
+.duration-btn {
+  flex: none;
+  border: 1px solid var(--track);
+  background: var(--card-bg);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.duration-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Dial */
+.dial-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 24px;
+}
+
+.dial { width: 100%; height: 100%; transform: rotate(-90deg); }
+
+.dial-track {
+  fill: none;
+  stroke: var(--track);
+  stroke-width: 12;
+}
+
+.dial-progress {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dasharray: 628.3185;
+  stroke-dashoffset: 628.3185;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.dial-time {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.btn-primary, .btn-secondary, .btn-danger {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--track);
+  color: var(--text);
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+.finished-box {
+  text-align: center;
+}
+
+.finished-box p {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Stat cards */
+.stat-cards {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 16px 8px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.stat-icon { font-size: 1.4rem; }
+.stat-value { font-size: 1.6rem; font-weight: 700; margin: 4px 0 2px; }
+.stat-label { font-size: 0.72rem; color: var(--text-secondary); }
+
+/* Calendar */
+.calendar {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.calendar-header button {
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  padding-bottom: 4px;
+}
+
+.calendar-cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  gap: 2px;
+}
+
+.calendar-cell.empty { cursor: default; }
+.calendar-cell.today { font-weight: 700; }
+.calendar-cell.selected { background: var(--accent-soft); }
+
+.calendar-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.day-sessions {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.day-sessions .session-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: var(--text);
+}
+
+/* History list */
+.list { display: flex; flex-direction: column; gap: 10px; }
+
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.session-icon { font-size: 1.3rem; }
+
+.session-info { flex: 1; }
+.session-type { font-weight: 600; }
+.session-date { font-size: 0.78rem; color: var(--text-secondary); }
+.session-duration { font-size: 0.9rem; color: var(--text-secondary); }
+
+.session-delete {
+  border: none;
+  background: transparent;
+  color: var(--danger);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.empty-hint {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 40px;
+}
+
+/* Settings */
+.settings-section {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.settings-section h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+.settings-hint {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.settings-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Tab bar */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: var(--card-bg);
+  border-top: 1px solid var(--track);
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+}
+
+.tab-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.tab-btn.active { color: var(--accent); }
+.tab-icon { font-size: 1.25rem; }

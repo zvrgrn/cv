@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vipassana Timer</title>
+<meta name="description" content="Тајмер за Випассана медитација — седење и одење, серии (streaks) и календар.">
+<meta name="theme-color" content="#5B7458">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vipassana">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>Vipassana Timer</h1>
+</header>
+
+<main>
+  <!-- TIMER TAB -->
+  <section id="tab-timer" class="tab-panel active">
+    <div class="segmented" id="type-segmented">
+      <button class="segmented-btn active" data-type="sitting">🧘 Sitting</button>
+      <button class="segmented-btn" data-type="walking">🚶 Walking</button>
+    </div>
+
+    <div class="duration-row" id="duration-row">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="dial-wrap">
+      <svg viewBox="0 0 220 220" class="dial">
+        <circle cx="110" cy="110" r="100" class="dial-track"></circle>
+        <circle cx="110" cy="110" r="100" class="dial-progress" id="dial-progress"></circle>
+      </svg>
+      <div class="dial-time" id="dial-time">20:00</div>
+    </div>
+
+    <div class="controls" id="controls">
+      <!-- filled by JS -->
+    </div>
+  </section>
+
+  <!-- PROGRESS TAB -->
+  <section id="tab-progress" class="tab-panel">
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="stat-icon">🔥</div>
+        <div class="stat-value" id="stat-current">0</div>
+        <div class="stat-label">Current streak</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-value" id="stat-longest">0</div>
+        <div class="stat-label">Longest streak</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-value" id="stat-total">0</div>
+        <div class="stat-label">Total sessions</div>
+      </div>
+    </div>
+
+    <div class="calendar">
+      <div class="calendar-header">
+        <button id="cal-prev" aria-label="Previous month">‹</button>
+        <div id="calendar-month-label"></div>
+        <button id="cal-next" aria-label="Next month">›</button>
+      </div>
+      <div class="calendar-grid" id="calendar-grid"></div>
+    </div>
+
+    <div class="day-sessions" id="day-sessions"></div>
+  </section>
+
+  <!-- HISTORY TAB -->
+  <section id="tab-history" class="tab-panel">
+    <div class="list" id="history-list"></div>
+    <p class="empty-hint" id="history-empty">Сеуште нема сесии. Заврши една во Timer.</p>
+  </section>
+
+  <!-- SETTINGS TAB -->
+  <section id="tab-settings" class="tab-panel">
+    <div class="settings-section">
+      <h2>Податоци</h2>
+      <p class="settings-hint">
+        Сесиите се чуваат локално во овој прелистувач (localStorage) — нема сервер.
+        Ако сакаш резервна копија или да ги пренесеш на друг уред, извези/увези JSON фајл.
+      </p>
+      <div class="settings-buttons">
+        <button id="export-btn" class="btn-secondary">Извези (Export)</button>
+        <label class="btn-secondary file-label">
+          Увези (Import)
+          <input type="file" id="import-input" accept="application/json" hidden>
+        </label>
+      </div>
+      <button id="clear-btn" class="btn-danger">Избриши ги сите сесии</button>
+    </div>
+
+    <div class="settings-section">
+      <h2>Apple Health / iHealth</h2>
+      <p class="settings-hint">
+        Web-прелистувачите немаат пристап до Apple Health или HealthKit — тоа е можно
+        само од нативна iOS апликација (веќе имаш една во репото, папка
+        <code>VipassanaTimer/</code>). Оваа web верзија работи насекаде (телефон, компјутер)
+        и може да се "инсталира" на home screen, но синхронизацијата со Health апликацијата
+        останува резервирана за iOS апката.
+      </p>
+    </div>
+
+    <div class="settings-section">
+      <h2>За апликацијата</h2>
+      <p class="settings-hint">Vipassana Timer — web верзија 1.0.</p>
+    </div>
+  </section>
+</main>
+
+<nav class="tab-bar">
+  <button class="tab-btn active" data-tab="tab-timer">
+    <span class="tab-icon">⏱</span><span>Timer</span>
+  </button>
+  <button class="tab-btn" data-tab="tab-progress">
+    <span class="tab-icon">🔥</span><span>Progress</span>
+  </button>
+  <button class="tab-btn" data-tab="tab-history">
+    <span class="tab-icon">📋</span><span>History</span>
+  </button>
+  <button class="tab-btn" data-tab="tab-settings">
+    <span class="tab-icon">⚙️</span><span>Settings</span>
+  </button>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>
